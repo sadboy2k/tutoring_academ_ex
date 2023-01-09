@@ -1,0 +1,131 @@
+  <main id="mainContent">
+    <div class="container">
+      <div class="row justify-content-center py-5">
+        <h3>Bienvenidos - Academia de Estudios Privados</h3>
+        <ejs-accordion>
+          <e-accordionitems>
+            <e-accordionitem expanded='true'>
+              <ng-template #header>
+                <div>DATOS DE REGISTRO</div>
+              </ng-template>
+              <ng-template #content>
+                <div>
+                  <h3>Registro de estudiantes</h3>
+                  <ejs-tab id="element" #tabObj>
+                    <e-tabitems>
+                      <e-tabitem>
+                        <ng-template #headerText>
+                          <div> Datos del estudiante </div>
+                        </ng-template>
+                        <ng-template #content>
+                          <div class="row justify-content-sm-left m-t-15 m-l-5">
+                            <div class="col-sm-6">
+                              <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+                                <div class="form-group"><label>Nombre</label><input class="form-control"
+                                    placeholder="Escriba su nombre" type="text" formControlName="name"
+                                    (blur)="setControlValidation('name')" /><span class="text-danger"
+                                    *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched">
+                                    El nombre no es válido
+                                  </span></div>
+                                <div class="form-group"><label>Apellidos</label><input class="form-control"
+                                    placeholder="Escriba sus apellidos" type="text" formControlName="lastname"
+                                    (blur)="setControlValidation('lastname')" /><span class="text-danger"
+                                    *ngIf="registerForm.get('lastname')?.invalid && registerForm.get('lastname')?.touched">
+                                    Los apellidos no son válidos
+                                  </span></div>
+                                <div class="form-group"><label>Correo electrónico</label><input class="form-control"
+                                    placeholder="Escriba su correo electronico" required type="email"
+                                    formControlName="email" (blur)="setControlValidation('email')" /><span
+                                    class="text-danger"
+                                    *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+                                    Correo no valido
+                                  </span></div>
+                                <div><label>Fecha de nacimiento</label>
+                                  <ejs-datepicker placeholder="Seleccione su fecha de nacimiento"
+                                    formControlName="dateOfBirth" [min]="minDate" [max]="maxDate"
+                                    (blur)="setControlValidation('dateOfBirth')">
+                                  </ejs-datepicker>
+                                  <span class="text-danger" *ngIf="registerForm.get('dateOfBirth')?.invalid &&
+                            registerForm.get('dateOfBirth')?.touched">
+                                    La fecha es inválida
+                                  </span>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </ng-template>
+                      </e-tabitem>
+                      <e-tabitem>
+                        <ng-template #headerText>
+                          <div> Sobre la Asignatura </div>
+                        </ng-template>
+                        <ng-template #content>
+                          <div class="row justify-content-sm-left m-t-15 m-l-5">
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                <form [formGroup]="registerForm">
+                                  <label>Materia a recibir</label>
+                                  <div fxLayout="colum" fxLayoutGap="10px">
+                                    <div class="m-b-10">
+                                      <ejs-checkbox formControlName="matterEnglish" label="Inglés"></ejs-checkbox>
+                                    </div>
+                                    <div class="m-b-10">
+                                      <ejs-checkbox formControlName="matterMath" label="Matemática">
+                                      </ejs-checkbox>
+                                    </div>
+                                  </div>
+                                  <div fxLayout="colum" fxLayoutGap="10px">
+                                    <div class="form-group">
+                                      <label>Horario de Clase</label>
+                                      <ejs-dropdownlist id='times' [dataSource]='times' required
+                                        formControlName="times">
+                                      </ejs-dropdownlist>
+                                      <span class="text-danger" *ngIf="registerForm.get('times')?.invalid &&
+                                        registerForm.get('times')?.touched"></span>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </ng-template>
+                      </e-tabitem>
+                    </e-tabitems>
+                  </ejs-tab>
+                  <ejs-toast #element [position]='position'>
+                    <ng-template #title>
+                      <div>
+                        <p>{{title}}</p>
+                      </div>
+                    </ng-template>
+                    <ng-template #content>
+                      <div>
+                        <p>{{content}}</p>
+                      </div>
+                    </ng-template>
+                  </ejs-toast>
+                  <div class="form-group">
+                    <div style="display: flex; margin-top: 10px;">
+                      <button type="submit" class="btn btn-primary" (click)="handleSubmit()">
+                        Registrar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </e-accordionitem>
+            <e-accordionitem>
+              <ng-template #header>
+                <div>LISTADO DE ESTUDIANTES</div>
+              </ng-template>
+              <ng-template #content>
+                <div>
+                  <app-list></app-list>
+                </div>
+              </ng-template>
+            </e-accordionitem>
+          </e-accordionitems>
+        </ejs-accordion>
+      </div>
+    </div>
+  </main>

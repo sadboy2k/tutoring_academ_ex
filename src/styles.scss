@@ -1,0 +1,190 @@
+﻿/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-angular-notifications/styles/material.css';
+/* size */
+/* MARGINS*/
+$m-0: 0em;
+$m-5: 0.3125em;
+$m-10: 0.625em;
+$m-15: 0.9375em;
+$m-20: 1.25em;
+$m-25: 1.5625em;
+$m-30: 1.875em;
+$m-35: 2.1875em;
+$m-40: 2.5em;
+$m-45: 2.8125em;
+$m-50: 3.125em;
+$m-55: 3.4375em;
+$m-60: 3.75em;
+
+/* PADDINGS */
+$p-0: 0em;
+$p-5: 0.3125em;
+$p-10: 0.625em;
+$p-15: 0.9375em;
+$p-20: 1.25em;
+$p-25: 1.5625em;
+$p-30: 1.875em;
+$p-35: 2.1875em;
+$p-40: 2.5em;
+$p-45: 2.8125em;
+$p-50: 3.125em;
+$p-55: 3.4375em;
+$p-60: 3.75em;
+
+/* margin  */
+.m0 {
+  margin: $m-0 !important;
+}
+.m-t-1 {
+  margin-top: 1px !important;
+}
+.m-t-2 {
+  margin-top: 2px !important;
+}
+.m-t-5 {
+  margin-top: $m-5 !important;
+}
+.m-t-10 {
+  margin-top: $m-10 !important;
+}
+.m-t-15 {
+  margin-top: $m-15 !important;
+}
+.m-t-20 {
+  margin-top: $m-20 !important;
+}
+.m-t-25 {
+  margin-top: $m-25 !important;
+}
+.m-t-30 {
+  margin-top: $m-30 !important;
+}
+.m-t-40 {
+  margin-top: $m-40 !important;
+}
+.m-t-50 {
+  margin-bottom: $m-50 !important;
+}
+.mt-5 {
+  margin-top: 5%;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.m-b-2 {
+  margin-bottom: 2px !important;
+}
+.m-b-5 {
+  margin-bottom: $m-5 !important;
+}
+.m-b-10 {
+  margin-bottom: $m-10 !important;
+}
+.m-b-15 {
+  margin-bottom: $m-15 !important;
+}
+.m-b-20 {
+  margin-bottom: $m-20 !important;
+}
+.m-b-30 {
+  margin-bottom: $m-30 !important;
+}
+.m-b-40 {
+  margin-bottom: $m-40 !important;
+}
+.m-b-45 {
+  margin-bottom: $m-45 !important;
+}
+.m-b-50 {
+  margin-bottom: $m-50 !important;
+}
+.ml-0 {
+  margin-left: $m-0 !important;
+}
+.m-l-5 {
+  margin-left: $m-5 !important;
+}
+.m-l-10 {
+  margin-left: $m-10 !important;
+}
+.m-l-15 {
+  margin-left: $m-15 !important;
+}
+.m-l-20 {
+  margin-left: $m-20 !important;
+}
+.m-l-25 {
+  margin-left: $m-25 !important;
+}
+.m-l-30 {
+  margin-left: $m-30 !important;
+}
+.m-l-33 {
+  margin-left: 33px !important;
+}
+.m-l-40 {
+  margin-left: $m-40 !important;
+}
+.m-l-45 {
+  margin-left: $m-45 !important;
+}
+.m-l-50 {
+  margin-left: $m-50 !important;
+}
+.mr-0 {
+  margin-right: $m-0 !important;
+}
+.m-r-5 {
+  margin-right: $m-5 !important;
+}
+.m-r-10 {
+  margin-right: $m-10 !important;
+}
+.m-r-20 {
+  margin-right: $m-20 !important;
+}
+.m-r-30 {
+  margin-right: $m-30 !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 160px !important; /* Height of the footer */
+  padding: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 160px; /* Set the fixed height of the footer here */
+}
+
+/* Override Bootstrap Styling */
+
+.btn-primary {
+  background-color: #025fce !important;
+}
