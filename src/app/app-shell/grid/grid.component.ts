@@ -1,5 +1,8 @@
 import { Component, Input, OnDestroy, OnInit, ViewChild } from "@angular/core";
-import { PageSettingsModel } from "@syncfusion/ej2-angular-grids";
+import {
+  GroupSettingsModel,
+  PageSettingsModel,
+} from "@syncfusion/ej2-angular-grids";
 import { StudentModel } from "src/app/shared/model/student";
 import { RegisterService } from "../app-action.service";
 import { GridComponent } from "@syncfusion/ej2-angular-grids";
@@ -14,6 +17,7 @@ export class GridList implements OnInit {
   public data: StudentModel[] = [];
   public pageSettings!: PageSettingsModel;
   public sortOptions!: object;
+  public groupOptions!: GroupSettingsModel;
 
   constructor(private regService: RegisterService) {}
 
@@ -24,6 +28,7 @@ export class GridList implements OnInit {
         this.sortOptions = {
           columns: [{ field: "matters", direction: "Ascending" }],
         };
+        this.groupOptions = { columns: ["matters"] };
         this.grid?.refresh();
       }
     });
